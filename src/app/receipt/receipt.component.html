@@ -1,0 +1,27 @@
+<div class="receipt-container">
+  <div class="receipt-header">
+    <h2>Reçu de Commande</h2>
+    <p class="receipt-date">{{ currentDate | date: 'fullDate' }}</p> <!-- Date actuelle -->
+  </div>
+  
+  <div class="customer-info">
+    <p><strong>Nom:</strong> {{ customerDetails.name }}</p>
+    <p><strong>Adresse:</strong> {{ customerDetails.address }}</p>
+    <p><strong>Téléphone:</strong> {{ customerDetails.phone }}</p>
+  </div>
+
+  <h3>Détails de la Commande:</h3>
+  <ul class="order-details">
+    <li *ngFor="let item of cart" class="order-item">
+      <span class="item-name">{{ item.name }}</span>
+      <span class="item-color">Couleur: {{ item.color }}</span>
+      <span class="item-price">{{ item.price | currency }}</span>
+    </li>
+  </ul>
+
+  <div class="pricing-info">
+    <p class="total-price"><strong>Prix Total (TTC):</strong> {{ grossPrice | currency }}</p>
+    <p class="gross-price"><strong>Prix Brut:</strong> {{ calculateTotal() | currency }}</p>
+    <p class="fees"><strong>Frais:</strong> {{ calculateFees() | currency }}</p>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+.contact-container {
+    width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    margin-top: 100px;
+    background: linear-gradient(135deg, #f0e6f6, #d3cde6);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.contact-container:hover {
+    transform: translateY(-10px); 
+}
+
+.contact-container h2
+ {
+    text-align: center;
+    color: #6a1b9a; 
+    margin-bottom: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-left: 120px;
+        width: 500px;
+        ;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #161515;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    border-color: #6a1b9a; 
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.5);
+    outline: none;
+}
+
+button {
+    width: 200px;
+    padding: 12px;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    margin-left: 280px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #4a0e6a; 
+    transform: translateY(-2px); 
+}
+
+.confirmation {
+    margin-top: 20px;
+    text-align: center;
+    color: #575b58; 
+    font-weight: bold;
+    font-size: 18px;
+    transition: opacity 0.3s ease-in-out;
+}

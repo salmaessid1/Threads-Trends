@@ -1,0 +1,32 @@
+<div class="product-section">
+  <div class="filter-bar">
+    <select class="custom-select" (change)="filterProducts($event)">
+      <option value="">All</option>
+      <option value="femme">Femme</option>
+      <option value="homme">Homme</option>
+      <option value="enfants">Enfants</option>
+  </select>
+    <button class="sort-button" (click)="toggleSortPrice()">
+      {{ sortPrice ? 'Price: Low to High' : 'Price: High to Low' }}
+    </button>  </div>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <img [src]="product.img" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p class="price">{{ product.price | currency }}</p>
+      <div class="color-circles">
+        <div class="circle red" (click)="selectColor('red')"></div>
+        <div class="circle blue" (click)="selectColor('blue')"></div>
+        <div class="circle green" (click)="selectColor('green')"></div>
+      </div>
+      <i class="favorite-icon" 
+         [ngClass]="{'favorited': favoritesService.getFavorites().includes(product)}"
+         (click)="addToFavorites(product)">
+        ♥
+      </i>
+      <button class="add-to-cart-button" (click)="addToCart(product)">Ajouter au panier</button>
+    </div>
+  </div>
+</div>

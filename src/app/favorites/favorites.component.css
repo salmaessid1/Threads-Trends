@@ -1,0 +1,91 @@
+.favorites-section {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, #848483, #bda0c3); 
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 1200px; 
+    margin-top: 100px; 
+    margin-left: 250px; 
+    transition: transform 0.3s;
+
+}
+.favorites-section:hover{
+    transform: translateY(-10px); 
+}
+.favorites-items {
+    margin-bottom: 20px; 
+}
+
+
+.favorite-card {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 15px; 
+    border-radius: 10px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15px;
+}
+
+.favorite-card img {
+    width: 80px; 
+    height: 60px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+
+.favorite-card h3 {
+    font-size: 1.2rem;
+    color: #333333; 
+    margin: 10px 0; 
+}
+
+
+.favorite-card .price {
+    font-size: 1rem; 
+    color: #ff6f61; 
+    font-weight: bold; 
+    margin: 5px 0 15px 0; 
+}
+
+
+.remove-button {
+    padding: 5px 10px; 
+    background-color: #dc3545; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.remove-button:hover {
+    background-color: #c82333; 
+}
+
+.order-details {
+    margin-top: 20px;
+}
+
+.order-details input {
+    margin: 5px; 
+    padding: 8px; 
+    width: 80%; 
+}
+
+.order-details button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.order-details button:hover {
+    background-color: #218838; 
+}

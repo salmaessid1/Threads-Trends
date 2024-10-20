@@ -1,0 +1,69 @@
+<div class="cart-section">
+  <h2>Your Shopping Bag</h2>
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <img [src]="item.img" alt="{{ item.name }}">
+      <h3>{{ item.name }}</h3>
+      <p class="price">{{ item.price | currency }}</p>
+      <button class="remove-button" (click)="removeFromCart(item)">Retirer</button>
+    </div>
+  </div>
+  <div class="total">
+    <h3>Total: {{ calculateTotal() | currency }}</h3>
+  </div>
+  <button class="checkout-button" (click)="openForm()">BUY NOW</button>
+
+  <!-- Formulaire de commande -->
+  <div *ngIf="showForm" class="order-form">
+    <h2>Formulaire de Commande</h2>
+    <form (ngSubmit)="submitCustomerInfo(customerInfo)" #customerForm="ngForm">
+      <div>
+        <label for="name">Nom:</label>
+        <input
+          id="name"
+          [(ngModel)]="customerInfo.name"
+          name="name"
+          required
+          placeholder="Entrez votre nom"
+        />
+        <div *ngIf="customerInfo.name === '' && customerForm.submitted" class="error">
+          Le nom est requis.
+        </div>
+      </div>
+
+      <div>
+        <label for="address">Adresse:</label>
+        <input
+          id="address"
+          [(ngModel)]="customerInfo.address"
+          name="address"
+          required
+          placeholder="Entrez votre adresse"
+        />
+        <div *ngIf="customerInfo.address === '' && customerForm.submitted" class="error">
+          L'adresse est requise.
+        </div>
+      </div>
+
+      <div>
+        <label for="phone">Numéro de Téléphone:</label>
+        <input
+          id="phone"
+          [(ngModel)]="customerInfo.phone"
+          name="phone"
+          required
+          placeholder="Entrez votre numéro de téléphone"
+          type="tel"
+        />
+        <div *ngIf="customerInfo.phone === '' && customerForm.submitted" class="error">
+          Le numéro de téléphone est requis.
+        </div>
+      </div>
+
+      <button type="submit">Soumettre</button>
+    </form>
+  </div>
+
+  <!-- Affichage du reçu -->
+  <app-receipt *ngIf="showReceipt" [cart]="cartItems" [customerDetails]="customerInfo"></app-receipt>
+</div>

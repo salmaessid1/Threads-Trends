@@ -1,0 +1,10 @@
+<div class="favorites-section">  <h2>Favorites</h2>
+  <div class="favorites-items">
+    <div class="favorite-card" *ngFor="let item of favorites">
+      <img [src]="item.img" alt="{{ item.name }}">
+      <h3>{{ item.name }}</h3>
+      <p class="price">{{ item.price | currency }}</p>
+      <button class="remove-button" (click)="removeFromFavorites(item)">Retirer</button>
+    </div>
+  </div>
+</div>
