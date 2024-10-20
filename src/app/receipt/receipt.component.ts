@@ -15,8 +15,7 @@ currentDate: string | number | Date | undefined;
   }
 
   calculateFees(): number {
-    return this.calculateTotal() * 0.1; // Exemple de frais (10%)
-  }
+    return this.calculateTotal() * 0.1; }
 
   get grossPrice(): number {
     return this.calculateTotal() + this.calculateFees();

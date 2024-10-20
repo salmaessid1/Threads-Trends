@@ -14,7 +14,7 @@ export class PanierComponent implements OnInit {
   customerInfo = {
     name: '',
     address: '',
-    phone: ''  // Assurez-vous que c'est un string
+    phone: '' 
   };
 
   constructor(private cartService: CartService) {}

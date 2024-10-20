@@ -1,135 +1,126 @@
-/* Style général pour le conteneur de reçu */
 .receipt-container {
-  background: linear-gradient(135deg, #f5f5f5, #e1e1e1); /* Dégradé d'arrière-plan */
-  border-radius: 15px; /* Coins arrondis */
-  padding: 20px; /* Espacement interne */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus profonde */
-  max-width: 600px; /* Largeur maximale */
-  margin: 30px auto; /* Centrage automatique */
-  font-family: 'Arial', sans-serif; /* Police moderne */
-  transition: transform 0.3s ease; /* Transition pour animation */
+  background: linear-gradient(135deg, #f5f5f5, #e1e1e1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 30px auto;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease;
 }
 
 .receipt-container:hover {
-  transform: scale(1.02); /* Agrandissement au survol */
+  transform: scale(1.02);
 }
 
-/* En-tête du reçu */
 .receipt-header {
-  text-align: center; /* Centre le texte */
-  margin-bottom: 20px; /* Espacement en bas */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .receipt-header h2 {
-  color: #4b3351; /* Couleur violet */
-  margin: 0; /* Supprime la marge par défaut */
-  font-size: 2rem; /* Taille du titre */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Ombre du texte */
+  color: #4b3351;
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Style pour la date du reçu */
 .receipt-date {
-  font-size: 0.9rem; /* Taille de la date */
-  color: #888; /* Couleur grise */
+  font-size: 0.9rem;
+  color: #888;
 }
 
-/* Informations client */
 .customer-info {
-  margin: 20px 0; /* Espacement vertical */
-  padding: 15px; /* Espacement interne */
-  background-color: #fff; /* Fond blanc */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  transition: background-color 0.3s; /* Transition pour couleur de fond */
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
 .customer-info:hover {
-  background-color: #f0f0f0; /* Changement de couleur au survol */
+  background-color: #f0f0f0;
 }
 
-/* Détails de la commande */
 .order-details {
-  list-style-type: none; /* Supprime les puces */
-  padding-left: 0; /* Supprime l'indentation */
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Élément de commande */
 .order-item {
-  display: flex; /* Utilisation de flexbox */
-  justify-content: space-between; /* Distribution de l'espace */
-  padding: 10px; /* Espacement interne */
-  border-bottom: 1px solid #ddd; /* Ligne de séparation */
-  transition: background-color 0.2s; /* Transition pour changement de fond */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s;
 }
 
 .order-item:hover {
-  background-color: #f9f9f9; /* Changement de couleur au survol */
+  background-color: #f9f9f9;
 }
 
-/* Style pour le nom, couleur et prix */
 .item-name {
-  color: #4b3351; /* Couleur violet pour le nom */
-  font-weight: bold; /* Met en gras */
+  color: #4b3351;
+  font-weight: bold;
 }
 
 .item-color {
-  color: #666; /* Couleur gris pour la couleur */
+  color: #666;
 }
 
 .item-price {
-  color: #333; /* Couleur standard pour le prix */
+  color: #333;
 }
 
-/* Informations de prix */
 .pricing-info {
-  margin-top: 20px; /* Espacement au-dessus */
-  text-align: right; /* Alignement à droite */
+  margin-top: 20px;
+  text-align: right;
 }
 
 .total-price, .gross-price, .fees {
-  font-weight: bold; /* Met en gras */
-  color: #4b3351; /* Couleur violet pour les prix */
+  font-weight: bold;
+  color: #4b3351;
 }
 
-/* Style pour le formulaire */
 .order-form {
-  margin-top: 20px; /* Espacement au-dessus */
-  padding: 20px; /* Espacement interne */
-  background-color: #fff; /* Fond blanc */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .order-form h2 {
-  color: #4b3351; /* Couleur violet */
-  text-align: center; /* Centre le texte */
-  margin-bottom: 15px; /* Espacement en bas */
+  color: #4b3351;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .order-form input {
-  width: 100%; /* Prend toute la largeur */
-  padding: 10px; /* Espacement interne */
-  margin: 5px 0; /* Espacement vertical */
-  border: 1px solid #ccc; /* Bordure grise */
-  border-radius: 5px; /* Coins arrondis */
-  transition: border-color 0.3s; /* Transition pour changement de bordure */
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
 }
 
 .order-form input:focus {
-  border-color: #4b3351; /* Bordure violette au focus */
-  outline: none; /* Supprime l'outline par défaut */
+  border-color: #4b3351;
+  outline: none;
 }
 
 .order-form button {
-  background-color: #4b3351; /* Couleur de fond violette */
-  color: white; /* Couleur du texte blanc */
-  border: none; /* Supprime la bordure */
-  padding: 10px 20px; /* Espacement interne */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur pointeur */
-  transition: background-color 0.3s; /* Transition pour changement de fond */
+  background-color: #4b3351;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .order-form button:hover {
-  background-color: #3b2840; /* Couleur de fond plus sombre au survol */
+  background-color: #3b2840;
 }

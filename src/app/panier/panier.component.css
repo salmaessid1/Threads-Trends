@@ -1,152 +1,137 @@
-/* Style général pour la section du panier */
 .cart-section {
-  max-width: 800px; /* Largeur maximale */
-  margin: 30px auto; /* Centrage */
-  padding: 20px; /* Espacement interne */
-  background: #f9f9f9; /* Fond gris clair */
-  border-radius: 15px; /* Coins arrondis */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  font-family: 'Arial', sans-serif; /* Police moderne */
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
-/* Titre de la section du panier */
 .cart-section h2 {
-  text-align: center; /* Centre le texte */
-  color: #4b3351; /* Couleur violet */
-  margin-bottom: 20px; /* Espacement en bas */
+  text-align: center;
+  color: #4b3351;
+  margin-bottom: 20px;
 }
 
-/* Style pour les articles du panier */
 .cart-items {
-  display: flex; /* Utilisation de flexbox */
-  flex-direction: column; /* Affichage en colonne */
-  gap: 15px; /* Espacement entre les articles */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* Style pour chaque article du panier */
 .cart-item {
-  display: flex; /* Utilisation de flexbox */
-  align-items: center; /* Aligne verticalement */
-  padding: 15px; /* Espacement interne */
-  background-color: #ffffff; /* Fond blanc pour chaque article */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Image de l'article */
 .cart-item img {
-  width: 80px; /* Largeur de l'image */
-  height: auto; /* Hauteur automatique pour maintenir le ratio */
-  border-radius: 5px; /* Coins arrondis pour l'image */
-  margin-right: 15px; /* Espacement à droite de l'image */
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
 }
 
-/* Titre de l'article */
 .cart-item h3 {
-  flex-grow: 1; /* Prend tout l'espace disponible */
-  font-size: 1.2rem; /* Taille de la police */
-  color: #333; /* Couleur du texte */
+  flex-grow: 1;
+  font-size: 1.2rem;
+  color: #333;
 }
 
-/* Prix de l'article */
 .price {
-  font-size: 1.1rem; /* Taille de la police pour le prix */
-  color: #4b3351; /* Couleur violet */
-  margin: 0; /* Supprime la marge */
+  font-size: 1.1rem;
+  color: #4b3351;
+  margin: 0;
 }
 
-/* Style pour le bouton de suppression */
 .remove-button {
-  background-color: #d9534f; /* Couleur rouge pour le bouton de suppression */
-  color: white; /* Couleur du texte blanc */
-  border: none; /* Supprime la bordure */
-  padding: 8px 15px; /* Espacement interne */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur pointeur */
-  transition: background-color 0.3s; /* Transition pour changement de couleur */
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .remove-button:hover {
-  background-color: #c9302c; /* Couleur plus sombre au survol */
+  background-color: #c9302c;
 }
 
-/* Style pour le total */
 .total {
-  margin-top: 20px; /* Espacement au-dessus */
-  text-align: right; /* Alignement à droite */
+  margin-top: 20px;
+  text-align: right;
 }
 
-/* Style pour le bouton d'achat */
 .checkout-button {
-  background-color: #4b3351; /* Couleur violet */
-  color: white; /* Couleur du texte blanc */
-  border: none; /* Supprime la bordure */
-  padding: 12px 20px; /* Espacement interne */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur pointeur */
-  font-size: 1.2rem; /* Taille de la police */
-  margin-top: 15px; /* Espacement au-dessus */
-  display: block; /* Affichage en bloc pour centrer */
-  width: 100%; /* Prend toute la largeur */
-  transition: background-color 0.3s, transform 0.2s; /* Transition pour changement de fond et transformation */
+  background-color: #4b3351;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .checkout-button:hover {
-  background-color: #3b2840; /* Couleur de fond plus sombre au survol */
-  transform: scale(1.05); /* Agrandissement au survol */
+  background-color: #3b2840;
+  transform: scale(1.05);
 }
 
-/* Style pour le formulaire de commande */
 .order-form {
-  margin-top: 30px; /* Espacement au-dessus */
-  padding: 20px; /* Espacement interne */
-  background-color: #ffffff; /* Fond blanc */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre du formulaire */
 .order-form h2 {
-  text-align: center; /* Centre le texte */
-  color: #4b3351; /* Couleur violet */
-  margin-bottom: 15px; /* Espacement en bas */
+  text-align: center;
+  color: #4b3351;
+  margin-bottom: 15px;
 }
 
-/* Style des champs de formulaire */
 .order-form input {
-  width: 100%; /* Prend toute la largeur */
-  padding: 12px; /* Espacement interne */
-  margin: 10px 0; /* Espacement vertical */
-  border: 1px solid #4b3351; /* Bordure violette */
-  border-radius: 5px; /* Coins arrondis */
-  transition: border-color 0.3s; /* Transition pour changement de bordure */
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #4b3351;
+  border-radius: 5px;
+  transition: border-color 0.3s;
 }
 
 .order-form input:focus {
-  border-color: #1c0d1c; /* Bordure plus sombre au focus */
-  outline: none; /* Supprime l'outline par défaut */
+  border-color: #1c0d1c;
+  outline: none;
 }
 
-/* Style du bouton de soumission */
 .order-form button {
-  background-color: #4b3351; /* Couleur de fond violette */
-  color: white; /* Couleur du texte blanc */
-  border: none; /* Supprime la bordure */
-  padding: 12px 20px; /* Espacement interne */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur pointeur */
-  font-size: 1rem; /* Taille de la police */
-  transition: background-color 0.3s, transform 0.2s; /* Transition pour changement de fond et transformation */
+  background-color: #4b3351;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .order-form button:hover {
-  background-color: #3b2840; /* Couleur de fond plus sombre au survol */
-  transform: translateY(-2px); /* Légère élévation au survol */
+  background-color: #3b2840;
+  transform: translateY(-2px);
 }
 
-/* Style pour les messages d'erreur */
 .error {
-  color: #d9534f; /* Couleur rouge pour les messages d'erreur */
-  font-size: 0.9rem; /* Taille de la police */
-  margin-top: 5px; /* Espacement au-dessus */
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }

@@ -5,7 +5,7 @@
       <img [src]="item.img" alt="{{ item.name }}">
       <h3>{{ item.name }}</h3>
       <p class="price">{{ item.price | currency }}</p>
-      <button class="remove-button" (click)="removeFromCart(item)">Retirer</button>
+      <button class="remove-button" (click)="removeFromCart(item)">Remove</button>
     </div>
   </div>
   <div class="total">
@@ -13,57 +13,56 @@
   </div>
   <button class="checkout-button" (click)="openForm()">BUY NOW</button>
 
-  <!-- Formulaire de commande -->
   <div *ngIf="showForm" class="order-form">
-    <h2>Formulaire de Commande</h2>
+    <h2>Form</h2>
     <form (ngSubmit)="submitCustomerInfo(customerInfo)" #customerForm="ngForm">
       <div>
-        <label for="name">Nom:</label>
+        <label for="name">Name:</label>
         <input
           id="name"
           [(ngModel)]="customerInfo.name"
           name="name"
           required
-          placeholder="Entrez votre nom"
+          placeholder="Enter Your Name"
         />
         <div *ngIf="customerInfo.name === '' && customerForm.submitted" class="error">
-          Le nom est requis.
+          Name is required !!
         </div>
       </div>
 
       <div>
-        <label for="address">Adresse:</label>
+        <label for="address">Adress:</label>
         <input
           id="address"
           [(ngModel)]="customerInfo.address"
           name="address"
           required
-          placeholder="Entrez votre adresse"
+          placeholder="Enter Your Adress"
         />
         <div *ngIf="customerInfo.address === '' && customerForm.submitted" class="error">
-          L'adresse est requise.
+          Adress is required !!
         </div>
       </div>
 
       <div>
-        <label for="phone">Numéro de Téléphone:</label>
+        <label for="phone">Phone:</label>
         <input
           id="phone"
           [(ngModel)]="customerInfo.phone"
           name="phone"
           required
-          placeholder="Entrez votre numéro de téléphone"
+          placeholder="Enter Your Number Phone"
           type="tel"
         />
         <div *ngIf="customerInfo.phone === '' && customerForm.submitted" class="error">
-          Le numéro de téléphone est requis.
+          Phone number is required !!
         </div>
       </div>
 
-      <button type="submit">Soumettre</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 
-  <!-- Affichage du reçu -->
+
   <app-receipt *ngIf="showReceipt" [cart]="cartItems" [customerDetails]="customerInfo"></app-receipt>
 </div>
